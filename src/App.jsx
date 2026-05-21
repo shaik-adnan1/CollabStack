@@ -1,12 +1,21 @@
+import { ThemeProvider } from "styled-components";
+import "./GlobleStyle.js";
+import { getTheme } from "./theme/theme";
+import GlobalStyle from "./GlobleStyle.js";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import AppRoutes from "./Routes.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [mode, setMode] = useState("dark");
 
-  return <>{/* Dummy commit */}</>;
+  const theme = getTheme(mode);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <AppRoutes />
+    </ThemeProvider>
+  );
 }
 
 export default App;
