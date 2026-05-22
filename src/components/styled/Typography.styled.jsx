@@ -8,3 +8,13 @@ export const StyledHeading = styled.h1`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   text-align: ${textAlign};
 `;
+
+/**
+ *
+ * git branch -m Main develop
+ * git fetch origin
+ * git branch -u origin/develop develop
+ * git remote set-head origin -a
+ *
+ *
+ */
